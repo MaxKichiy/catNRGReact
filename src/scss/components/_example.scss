@@ -1,0 +1,224 @@
+@import '../variables.scss';
+
+.example-page {
+  width: 320px;
+  margin: 0 auto;
+  background-color: $bg-grey;
+}
+.example-page__wrapper {
+  width: 280px;
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+
+.example-page__title {
+  padding: 30px 0;
+  font-size: 36px;
+  font-weight: normal;
+}
+.example-page__text {
+  font-family: 'Arial';
+  color: #444444;
+  font-size: 14px;
+  line-height: 18px;
+}
+.example-page__slogan {
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.example-page__properties {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.example-page__picture {
+  margin-top: 40px;
+}
+.example-page__picture--after {
+  display: none;
+}
+.example-page__picture-toggles {
+  display: flex;
+  text-transform: uppercase;
+  font-size: 16px;
+  align-items: center;
+  justify-content: space-between;
+  width: 200px;
+  margin: 0 auto;
+  .picture-toggles__field {
+    position: relative;
+    min-width: 85px;
+    height: 14px;
+    border: 1px solid #cdcdcd;
+    background-color: #ffffff;
+    border-radius: 5px;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: 35px;
+      height: 6px;
+      background-color: #68b738;
+      border-radius: 5px;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .example-page {
+    width: auto;
+    background-color: #fff;
+  }
+  .example-page__wrapper {
+    position: relative;
+    width: 708px;
+    margin: 0 auto;
+  }
+  .example-page__title {
+    font-size: 60px;
+    line-height: 60px;
+  }
+  .example-page__text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .example-page__properties {
+    width: 384px;
+  }
+  .picture-toggle--before {
+    order: 0;
+  }
+  .picture-toggle--after {
+    order: 1;
+  }
+  .picture-toggle {
+    font-size: 20px;
+    line-height: 20px;
+    padding-bottom: 5px;
+    border-bottom: 1px dotted #bebebe;
+    cursor: pointer;
+    &:hover {
+      border-bottom: 1px solid #989898;
+    }
+    &:active {
+      border-bottom: 1px solid #ffffff;
+    }
+  }
+  .example-page__slogan {
+    position: absolute;
+    top: 200px;
+    right: 0;
+    font-size: 20px;
+    line-height: 20px;
+    width: 192px;
+    float: right;
+    text-align: right;
+  }
+  .example-page__picture {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .example-page__picture--after {
+    display: block;
+    width: 354px;
+  }
+  .example-page__picture-toggles {
+    width: auto;
+    .picture-toggles__field {
+      order: 1;
+      width: 444px;
+      height: 6px;
+      background-color: #dcdcdc;
+      border: none;
+      margin: 0 20px;
+      &:hover {
+        & ~ .picture-toggle {
+          border-bottom: 1px solid #fff;
+        }
+        &:before {
+          box-shadow: 0 3px 10px #bebebe;
+        }
+      }
+      &:active {
+        & ~ .picture-toggle {
+          border-bottom: 1px solid #989898;
+        }
+        &:before {
+          border: 2px solid #68b738;
+        }
+      }
+
+      &::before {
+        left: 50%;
+        top: -220%;
+        width: 35px;
+        height: 35px;
+        margin-left: -17px;
+        border-radius: 50%;
+        background-color: #fff;
+        border: 1px solid #d2d2d2;
+        box-shadow: 0 3px 10px #d7d7d7;
+        cursor: pointer;
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        background-color: #68b738;
+        border-radius: 50%;
+        width: 8px;
+        height: 8px;
+        top: 50%;
+        left: 50%;
+        margin-left: -2px;
+        margin-top: -2px;
+      }
+    }
+  }
+}
+@media (min-width: $desktop-width) {
+  .example-page__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1220px;
+    margin-bottom: 20px;
+  }
+
+  .example-page__title {
+    width: 570px;
+    flex-grow: 1;
+  }
+  .example-page__text {
+    width: 430px;
+  }
+  .example-page__properties {
+    margin-top: 60px;
+  }
+  .example-page__slogan {
+    position: relative;
+    width: 325px;
+    left: 0;
+    top: 0;
+    float: left;
+    width: auto;
+    span {
+      margin-left: 77px;
+    }
+  }
+  .example-page__picture {
+    width: 609px;
+    margin-top: -70px;
+  }
+  .example-page__picture--before {
+    width: 255px;
+  }
+  .example-page__picture--after {
+    width: 255px;
+  }
+  .example-page__picture-toggles {
+    margin-left: -35px;
+  }
+}
