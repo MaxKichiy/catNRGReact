@@ -5,6 +5,9 @@ import classNames from 'classnames';
 function Navigation() {
   const [openedMenu, setOpenedMenu] = useState(true);
 
+  const onMenuClickHendler = () => {
+    setOpenedMenu(!openedMenu);
+  };
   return (
     <nav
       className={classNames(
@@ -14,7 +17,7 @@ function Navigation() {
       )}
     >
       <button
-        onClick={() => setOpenedMenu(!openedMenu)}
+        onClick={onMenuClickHendler}
         className='main-nav__button'
         type='button'
       ></button>

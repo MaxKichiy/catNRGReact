@@ -50,21 +50,14 @@
   .main-nav__wrapper {
     width: 516px;
     margin-left: 75px;
+    &--disabled {
+      display: block;
+    }
   }
   .main-nav__button {
     display: none;
   }
-  .main-nav__button--opened {
-    &:before {
-      content: '';
-      position: absolute;
-      top: 24px;
-      right: 20px;
-      width: 24px;
-      height: 2px;
-      background-color: #000;
-    }
-  }
+
   .main-nav__list {
     display: flex;
     flex-wrap: wrap;

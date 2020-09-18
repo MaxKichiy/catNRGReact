@@ -1,5 +1,10 @@
 import React from 'react';
 
+import adressMob from '../../scss/assets/map_mobile.png';
+import adressTab from '../../scss/assets/map-tablet.png';
+import adressDesk from '../../scss/assets/map-desktop.png';
+import footerLogo from '../../scss/assets/footer-logo.png';
+
 function Footer() {
   return (
     <footer className='page-footer'>
@@ -14,17 +19,11 @@ function Footer() {
       <div className='page-footer__wrapper--bottom'>
         <div className='page-footer__map'>
           <picture>
-            <source
-              media='(min-width: 1220px)'
-              srcSet='./src/assets/map-desktop.png'
-            />
-            <source
-              media='(min-width: 768px)'
-              srcSet='./src/assets/map-tablet.png'
-            />
+            <source media='(min-width: 1220px)' srcSet={adressDesk} />
+            <source media='(min-width: 768px)' srcSet={adressTab} />
             <img
               className='footer-map'
-              src='./src/assets/map_mobile.png'
+              src={adressMob}
               width='320'
               height='365'
               alt='адресс магазина'
@@ -33,7 +32,7 @@ function Footer() {
         </div>
         <div className='page-footer__logo'>
           <img
-            src='./src/assets/footer-logo.png'
+            src={footerLogo}
             alt='Логотип внизу страницы'
             className='footer__logo'
           />
