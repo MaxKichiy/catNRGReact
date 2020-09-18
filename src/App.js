@@ -4,14 +4,18 @@ import Header from './pages/components/Header';
 import Main from './pages/Main';
 import Form from './pages/Form';
 import Catalog from './pages/Catalog';
+import { Route, Switch } from 'react-router';
 function App() {
   return (
     <div className='wrapper'>
       <Header />
       <div className='content'>
-        <Main />
-        <Form />
-        <Catalog />
+        <Switch>
+          <Route path='/form' component={Form} />
+          <Route path='/catalog' component={Catalog} />
+          <Route path='/' component={Main} />
+          <Catalog />
+        </Switch>
       </div>
       <Footer />
     </div>
