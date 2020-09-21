@@ -85,5 +85,29 @@
       "amount": "1 упаковка (30 г)",
       "price": 300
     }
+  ],
+  "orders": [
+    {
+      "_id": "",
+      "name": "Барсик",
+      "weight": 7,
+      "years": 7,
+      "type": {
+        "slim": false,
+        "mass": false,
+        "idk": true
+      },
+      "userData": {
+        "email": "kuklachev@gmail.com",
+        "phone": "8 (960) 900-60-90"
+      },
+      "comment": "",
+      "additions": {
+        "sugar": false,
+        "water": false,
+        "milk": false,
+        "vitamins": false
+      }
+    }
   ]
 }

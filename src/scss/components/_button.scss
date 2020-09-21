@@ -9,6 +9,10 @@
   background-color: #68b738;
   border: none;
   cursor: pointer;
+  &--disable {
+    background-color: #ccc;
+    pointer-events: none;
+  }
   &:hover {
     background-color: #5eaa2f;
   }

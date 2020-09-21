@@ -2,7 +2,7 @@ import React from 'react';
 import Footer from './pages/components/Footer';
 import Header from './pages/components/Header';
 import Main from './pages/Main';
-import Form from './pages/Form';
+import FormPage from './pages/Form';
 import Catalog from './pages/Catalog';
 import { Route, Switch } from 'react-router';
 function App() {
@@ -11,7 +11,7 @@ function App() {
       <Header />
       <div className='content'>
         <Switch>
-          <Route path='/form' component={Form} />
+          <Route path='/form' component={FormPage} />
           <Route path='/catalog' component={Catalog} />
           <Route path='/' component={Main} />
           <Catalog />
