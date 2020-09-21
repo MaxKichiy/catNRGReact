@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "_id": "5f67bb4adbf970a5bdde66bc",
+      "name": "Cat Energy PRO 500 г",
+      "flavor": "Курица",
+      "price": 700,
+      "amount": 500,
+      "picture": "https://i.ibb.co/Sc0hZdd/catalog-1-mobile.png",
+      "pictureBig": "https://i.ibb.co/xj1Wg9r/catalog-1-tablet.png"
+    },
+    {
+      "_id": "5f67bb4a993994779edeca68",
+      "name": "Cat Energy PRO 1000 г",
+      "flavor": "Курица",
+      "price": 1000,
+      "amount": 1000,
+      "picture": "https://i.ibb.co/tYQzpfG/catalog-2-mobile-jpg.png",
+      "pictureBig": "https://i.ibb.co/Y2VtZ7L/catalog-2-tablet.png"
+    },
+    {
+      "_id": "5f67bb4ae6110a41e8e1fa07",
+      "name": "Cat Energy PRO 500 г",
+      "flavor": "Рыба",
+      "price": 700,
+      "amount": 500,
+      "picture": "https://i.ibb.co/5rq4ywZ/catalog-2-mobile.jpg",
+      "pictureBig": "https://i.ibb.co/72nd2V3/catalog-3-tablet.png"
+    },
+    {
+      "_id": "5f67bb4afa052ef20aff423a",
+      "name": "Cat Energy PRO 1000 г",
+      "flavor": "Рыба",
+      "price": 1000,
+      "amount": 1000,
+      "picture": "https://i.ibb.co/82Fg4JT/catalog-4-mobile.jpg",
+      "pictureBig": "https://i.ibb.co/cvvzbJJ/catalog-4-tablet.png"
+    },
+    {
+      "_id": "5f67bb4a0011b6c3f6be2d50",
+      "name": "Cat Energy PRO 500 г",
+      "flavor": "Гречка",
+      "price": 400,
+      "amount": 500,
+      "picture": "https://i.ibb.co/h7bjf3N/catalog-3-mobile.jpg",
+      "pictureBig": "https://i.ibb.co/ZKtybNN/catalog-5-tablet.png"
+    },
+    {
+      "_id": "5f67bb4a690a663310de897b",
+      "name": "Cat Energy PRO 1000 г",
+      "flavor": "Гречка",
+      "price": 700,
+      "amount": 1000,
+      "picture": "https://i.ibb.co/xMRZTv8/catalog-6-mobile.jpg",
+      "pictureBig": "https://i.ibb.co/zXbwBqj/catalog-6-tablet.png"
+    },
+    {
+      "_id": "5f67bb4a0441f9d7d1b65fb0",
+      "name": "Cat Energy PRO 500 г",
+      "flavor": "Рис",
+      "price": 500,
+      "amount": 500,
+      "picture": "https://i.ibb.co/5k1F2Lc/catalog-4-mobile.jpg",
+      "pictureBig": "https://i.ibb.co/Wf7RPG7/catalog-7-tablet.png"
+    }
+  ]
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import CatalogItem from './components/CatalogItem';
 
 function Catalog() {
   return (
@@ -7,40 +8,7 @@ function Catalog() {
         <div className='page-secondary__wrapper'>
           <h1 className='page-secondary__title'>Каталог продукции</h1>
           <ul className='page-secondary__catalog catalog'>
-            <li className='catalog__item'>
-              <div className='catalog__item-image'>
-                <picture>
-                  <source
-                    media='(min-width: 768px)'
-                    srcSet='./src/assets/catalog-1-tablet.png'
-                  />
-                  <img
-                    src='./src/assets/catalog-1-mobile.png'
-                    alt='Фото товара'
-                  />
-                </picture>
-              </div>
-              <div className='catalog__item-description'>
-                <p className='catalog__item-text'>Cat Energy PRO 500 г</p>
-                <table>
-                  <tbody>
-                    <tr>
-                      <td>Объем</td>
-                      <td>500 г</td>
-                    </tr>
-                    <tr>
-                      <td>Вкус</td>
-                      <td>Курица</td>
-                    </tr>
-                    <tr>
-                      <td>Цена</td>
-                      <td>700 Р.</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <button className='catalog-item__button button'>Заказать</button>
-            </li>
+            <CatalogItem />
             <li className='catalog__item'>
               <div className='catalog__item-image'>
                 <picture>

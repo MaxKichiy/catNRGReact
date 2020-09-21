@@ -16,7 +16,6 @@ function Example() {
   const onSetBefore = () => {
     setAfter(false);
   };
-  console.log(after);
   return (
     <section className='example-page'>
       <div className='example-page__wrapper'>
