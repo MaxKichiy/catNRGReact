@@ -6,7 +6,7 @@ const initialState = {
 
 const catalogReducer = (state = initialState, action) => {
   switch (action.type) {
-    case actionTypes.FETCHING_DATA:
+    case actionTypes.FETCHING_CATALOG:
       return {
         ...state,
         catalog: action.payload,

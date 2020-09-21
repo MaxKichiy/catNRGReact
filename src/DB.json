@@ -1,5 +1,5 @@
 {
-  "data": [
+  "catalog": [
     {
       "_id": "5f67bb4adbf970a5bdde66bc",
       "name": "Cat Energy PRO 500 г",
@@ -62,6 +62,28 @@
       "amount": 500,
       "picture": "https://i.ibb.co/5k1F2Lc/catalog-4-mobile.jpg",
       "pictureBig": "https://i.ibb.co/Wf7RPG7/catalog-7-tablet.png"
+    }
+  ],
+  "additionalCatalog": [
+    {
+      "name": "Сахарозаменитель",
+      "amount": "1 упаковка (100 г)",
+      "price": 100
+    },
+    {
+      "name": "Питьевая Вода",
+      "amount": "5 литров",
+      "price": 50
+    },
+    {
+      "name": "Молоко",
+      "amount": "1 литр",
+      "price": 100
+    },
+    {
+      "name": "Витамины",
+      "amount": "1 упаковка (30 г)",
+      "price": 300
     }
   ]
 }

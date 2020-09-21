@@ -1,15 +1,6 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchingData } from '../../redux/actions/catalog';
+import React from 'react';
 
-const CatalogItems = () => {
-  const dispatch = useDispatch();
-  const catalog = useSelector((state) => state.catalog.catalog);
-
-  useEffect(() => {
-    dispatch(fetchingData());
-  }, [dispatch]);
-
+const CatalogItems = ({ catalog }) => {
   let catalogList = catalog.map((el, index) => (
     <li key={el._id} className='catalog__item'>
       <div className='catalog__item-image'>

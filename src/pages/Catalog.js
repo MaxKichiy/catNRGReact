@@ -1,14 +1,26 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchingAdditionalItems } from '../redux/actions/additionalCatalog';
+import { fetchingData } from '../redux/actions/catalog';
+import AdditionalCatalogItems from './components/AdditionalCatalogItems';
 import CatalogItems from './components/CatalogItems';
 
 function Catalog() {
+  const dispatch = useDispatch();
+  const catalog = useSelector((state) => state.catalog.catalog);
+  const additionalCatalog = useSelector((state) => state.addCatalog.addCatalog);
+  useEffect(() => {
+    dispatch(fetchingAdditionalItems());
+    dispatch(fetchingData());
+  }, [dispatch]);
+
   return (
     <>
       <main className='page-secondary'>
         <div className='page-secondary__wrapper'>
           <h1 className='page-secondary__title'>Каталог продукции</h1>
           <ul className='page-secondary__catalog catalog'>
-            <CatalogItems />
+            <CatalogItems catalog={catalog} />
             <li className='catalog__item'>
               <div className='page-secondary__catalog-more'>
                 <h3 className='catalog-more__title'>
@@ -29,30 +41,7 @@ function Catalog() {
         <div className='catalog-advance__wrapper'>
           <h2 className='catalog-advance__title'>Дополнительные товары</h2>
           <ul className='catalog-advance__list advance__list'>
-            <li className='advance__item'>
-              <h4 className='advance__item-title'>Сахарозаменитель</h4>
-              <p className='advance__item-description'>1 упаковка (100 г)</p>
-              <p className='advance__item-price'>100 Р.</p>
-              <button className='advance__item-button button'>Заказать</button>
-            </li>
-            <li className='advance__item'>
-              <h4 className='advance__item-title'>Питьевая вода</h4>
-              <p className='advance__item-description'>5 литров</p>
-              <p className='advance__item-price'>50 Р.</p>
-              <button className='advance__item-button button'>Заказать</button>
-            </li>
-            <li className='advance__item'>
-              <h4 className='advance__item-title'>Молоко</h4>
-              <p className='advance__item-description'>1 литр</p>
-              <p className='advance__item-price'>100 Р.</p>
-              <button className='advance__item-button button'>Заказать</button>
-            </li>
-            <li className='advance__item'>
-              <h4 className='advance__item-title'>Витамины</h4>
-              <p className='advance__item-description'>1 упаковка (30 г)</p>
-              <p className='advance__item-price'>300 Р.</p>
-              <button className='advance__item-button button'>Заказать</button>
-            </li>
+            <AdditionalCatalogItems addCatalog={additionalCatalog} />
           </ul>
           <div className='catalog-advance__gift'>
             <svg
