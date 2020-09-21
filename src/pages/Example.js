@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import classNames from 'classnames';
 import beforeMob from '../scss/assets/before-mobile.png';
 import afterMob from '../scss/assets/after-mobile.png';
-import beforeDesk from '../scss/assets/before-desktop.png';
-import afterDesk from '../scss/assets/after-desktop.png';
 import afterFullDesk from '../scss/assets/afterFullDesk.png';
 import beforeFullDesk from '../scss/assets/beforeFullDesk.png';
 
