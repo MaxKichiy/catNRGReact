@@ -5,8 +5,11 @@ import * as Yup from 'yup';
 import CheckInput from './components/Form/CheckInput';
 import RadioInput from './components/Form/RadioInput';
 import TextInput from './components/Form/TextInput';
+import { sendOrder } from '../redux/actions/setOrder';
+import { useDispatch } from 'react-redux';
 
 function FormPage() {
+  const dispatch = useDispatch();
   return (
     <>
       <main className='page-third'>
@@ -43,11 +46,9 @@ function FormPage() {
                 .email('Не верный email адресс'),
               phone: Yup.number().required('Обязательное поле'),
             })}
-            onSubmit={(values, { setSubmitting }) => {
-              setTimeout(() => {
-                alert(JSON.stringify(values, null, 2));
-                setSubmitting(false);
-              }, 400);
+            onSubmit={(values, { setSubmitting, resetForm }) => {
+              dispatch(sendOrder(values, resetForm));
+              setSubmitting(false);
             }}
           >
             {(formik) => (
@@ -142,6 +143,7 @@ function FormPage() {
                       label='Питьевая вода'
                       name='additions.water'
                       id='water'
+                      type='checkbox'
                     />
                   </div>
                   <div className='form__addition-input'>
@@ -149,6 +151,7 @@ function FormPage() {
                       label='Молоко'
                       id='milk'
                       name='additions.milk'
+                      type='checkbox'
                     />
                   </div>
                   <div className='form__addition-input'>
@@ -156,6 +159,7 @@ function FormPage() {
                       label='Витамины'
                       id='vitamins'
                       name='additions.vitamins'
+                      type='checkbox'
                     />
                   </div>
                 </div>
