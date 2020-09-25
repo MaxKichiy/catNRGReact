@@ -9,7 +9,7 @@ const setAdditionalItems = (data) => ({
 
 export const fetchingAdditionalItems = () => (dispatch) => {
   axios
-    .get('http://localhost:3001/additionalCatalog')
+    .get('https://dummy-hooks.firebaseio.com/additionalCatalog.json')
     .then(({ data }) => dispatch(setAdditionalItems(data)))
     .catch((err) => alert('Some erros'));
 };

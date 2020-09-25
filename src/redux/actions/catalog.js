@@ -9,7 +9,7 @@ const setData = (data) => ({
 
 export const fetchingData = () => (dispatch) => {
   axios
-    .get('http://localhost:3001/catalog')
+    .get('https://dummy-hooks.firebaseio.com/catalog.json')
     .then(({ data }) => dispatch(setData(data)))
     .catch((err) => alert('idiot chto ti delaesh'));
 };
